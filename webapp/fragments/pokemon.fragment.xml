@@ -1,0 +1,37 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    id='pokemonFragment'
+>
+<Dialog id='dialog' title='{pokedex>name/english}' draggable="true" contentWidth="735px" contentHeight="400px">
+   <content>
+        <HBox>
+            <Image id='pokeImage' src='{pokedex>image/hires}' width="300px" height="300px" class='imageFragment'/>
+            <Panel width="300px" height="340px" class='statsPanel'>
+                <VBox>
+                    <Text text='Type: {pokedex>type}' class='spacer'/>
+                    <Text text='Species: {pokedex>species}' class='spacer' />
+                    <VBox class='statSection '>
+                        <Text text='Basestats:' class='spacer'/>
+                        <Text text='   HP: {pokedex>base/HP}'/>
+                        <Text text='   Attack: {pokedex>base/Attack}'/>
+                        <Text text='   Defense: {pokedex>base/Defense}'/>
+                        <Text text='   Sp. Defense: {pokedex>base/Sp. Attack}'/>
+                        <Text text='   Speed: {pokedex>base/Speed}' class='spacer'/>
+                    </VBox>
+                    <VBox >
+                        <Text text='Desription:' />
+                        <Text text='{pokedex>description}' />       
+                    </VBox>     
+
+                   
+                </VBox>    
+            </Panel>
+         </HBox>
+    </content> 
+     <endButton>
+        <Button text="Close" press="closeDialog"/>
+     </endButton>
+   
+</Dialog>
+</c:FragmentDefinition>

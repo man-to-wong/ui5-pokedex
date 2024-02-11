@@ -62,7 +62,7 @@
         "type": "sap.ui.model.json.JSONModel",
         "uri": "/model/pokedex.json"
     },
-    "login": {
+    "credentials": {
       "type": "sap.ui.model.json.JSONModel",
       "uri": "/model/credentials.json"
   }

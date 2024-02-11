@@ -30,6 +30,8 @@ sap.ui.define([
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
 
+                //set credentials model
+
                 //Sizelimit vom Pokedex-Model erhöhen
                 var oModel= this.getModel("pokedex");
                 oModel.setSizeLimit(150);

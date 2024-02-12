@@ -11,7 +11,10 @@
         <ToolbarSpacer/>
         <SearchField placeholder="pokemon" width="200px" search="filterPokemon"/>
     </Toolbar>
-    <Table id='pokedexTable' items="{path: 'pokedex>/'}">
+    <Table id='pokedexTable' items="{path: 'pokedex>/',
+                                    sorter:{path:'species',
+                                    group:true}
+                                    }">
         <columns>
             <Column>
                 <Text text='Pokemon'/>

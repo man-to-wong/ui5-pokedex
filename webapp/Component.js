@@ -34,7 +34,7 @@ sap.ui.define([
 
                 //Sizelimit vom Pokedex-Model erhöhen
                 var oModel= this.getModel("pokedex");
-                oModel.setSizeLimit(150);
+                oModel.setSizeLimit(898);
 
             }
         });

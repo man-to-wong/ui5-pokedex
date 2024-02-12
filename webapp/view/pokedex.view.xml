@@ -9,11 +9,11 @@
         <ToolbarSpacer/>
         <Label text='Pokedex' design="Bold" class='pokeLabel'/>
         <ToolbarSpacer/>
-        <SearchField placeholder="pokemon" width="200px" search="filterPokemon"/>
+        <SearchField id='sf' placeholder="pokemon" width="200px"  showRefreshButton="true"  liveChange='filterPokemon'/>
     </Toolbar>
     <Table id='pokedexTable' items="{path: 'pokedex>/',
-                                    sorter:{path:'species',
-                                    group:true}
+                                    sorter:{path:'id',
+                                    group:false}
                                     }">
         <columns>
             <Column>

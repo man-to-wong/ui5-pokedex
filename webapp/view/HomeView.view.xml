@@ -1,7 +1,7 @@
 <mvc:View controllerName="pokedex.demo.controller.HomeView"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-            <Page id="page" showHeader="false">
+            <Page id="page" showHeader="false" showNavButton="true">
                 <mvc:XMLView viewName="pokedex.demo.view.login" class='positionLogin'/>
                 <!--mvc:XMLView viewName="pokedex.demo.view.pokedex"/-->
             </Page>   

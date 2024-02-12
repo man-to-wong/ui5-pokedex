@@ -11,10 +11,25 @@ sap.ui.define(['sap/ui/core/mvc/Controller',
             onInit: function () {
 
             },
-            filterPokemon: function (oEvent) {
-                
+            filterPokemon: function(oEvent){
+                //Eventhandling für liveChange
+                let pokeQuery = oEvent.getParameter('newValue');
+                let oTable = this.byId('pokedexTable');
+                var pokeFilter= [new Filter( 'name/english' , FilterOperator.Contains , pokeQuery)];
+                let oBinding = oTable.getBinding('items'); //Aggregation Binding wird aus dem Table-Controller geholt (item-Attribut)
+                if (pokeQuery.length > 0) {
+                //Filterung durchführen
+                var filter = oBinding.filter(pokeFilter);
+             }
+             else{
+                //Filterung löschen 
+                oBinding.filter([])
+             }
+            },
+            searchPokemon: function (oEvent) {
+                //Eventhandling für search
                 //oEvent Parameter 'query' abfragen (Wert vom Suchfeld)
-                const pokeQuery = oEvent.getParameter('query');
+                let pokeQuery = oEvent.getParameter('query');
                 if (pokeQuery) {
                    //Filter bauen: Pfad
                    var pokeFilter = [new Filter( 'name/english' , FilterOperator.Contains , pokeQuery)];
